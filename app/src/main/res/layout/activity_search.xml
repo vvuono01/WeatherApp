@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,10 +7,37 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.vvuono.weatherapp.SearchActivity">
+    android:orientation="vertical"
+    tools:context="com.vvuono.weatherapp.SearchActivity"
+    android:gravity="center_horizontal">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="@string/welcome"
+        android:textColor="@color/primaryText"
+        android:textSize="26sp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt"
+        android:textColor="@color/secondaryText"
+        android:textSize="18sp"
+        android:textIsSelectable="false"
+        android:gravity="center"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/zipCode"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:hint="@string/zip_code_hint"
+        android:maxLength="5" />
+</LinearLayout>
