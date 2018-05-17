@@ -41,4 +41,16 @@
         android:id="@+id/b_search"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/medium_spacing" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/error"
+        android:textSize="@dimen/small_text"
+        android:id="@+id/tv_error"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/small_spacing"
+        android:textStyle="italic"
+        android:visibility="gone"
+        tools:text="@string/invalid_zip_code_format"/>
 </LinearLayout>

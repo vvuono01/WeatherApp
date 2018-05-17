@@ -3,4 +3,5 @@
     <string name="prompt">Please enter the zip code for which you would like to check the weather.</string>
     <string name="zip_code_hint">Zip Code</string>
     <string name="search_button">Search</string>
+    <string name="invalid_zip_code_format">Please enter a 5-digit zip code.</string>
 </resources>
