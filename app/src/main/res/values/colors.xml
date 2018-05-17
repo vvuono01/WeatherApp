@@ -6,4 +6,5 @@
     <color name="primaryText">#181E29</color>
     <color name="secondaryText">#707070</color>
     <color name="error">#FF0000</color>
+    <color name="disabled">#EDEDED</color>
 </resources>

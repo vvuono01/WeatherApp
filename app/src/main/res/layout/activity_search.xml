@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:text="@string/search_button"
         android:textColor="@android:color/white"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/search_button"
         android:id="@+id/b_search"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/medium_spacing"
