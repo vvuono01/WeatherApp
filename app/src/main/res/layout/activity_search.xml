@@ -16,20 +16,19 @@
         android:layout_height="wrap_content"
         android:text="@string/prompt"
         android:textColor="@color/secondaryText"
-        android:textSize="18sp"
+        android:textSize="@dimen/large_text"
         android:textIsSelectable="false"
         android:gravity="center"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="@dimen/small_spacing" />
 
     <EditText
-        android:layout_width="140dp"
+        android:layout_width="@dimen/zip_code_field_size"
         android:layout_height="wrap_content"
         android:inputType="number"
-        android:ems="10"
         android:id="@+id/et_zip_code"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="@dimen/large_spacing"
         android:hint="@string/zip_code_hint"
         android:maxLength="5" />
 
@@ -41,5 +40,5 @@
         android:background="@color/colorPrimary"
         android:id="@+id/b_search"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp" />
+        android:layout_marginTop="@dimen/medium_spacing" />
 </LinearLayout>
