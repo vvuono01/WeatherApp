@@ -6,13 +6,13 @@
     <string name="weather_call_failed">The call was unsuccessful. Please try again.</string>
     <string name="weather">Weather</string>
     <string name="degrees">°F</string>
-    <string name="high">High %dF</string>
-    <string name="winds">Winds %s at %dmph.</string>
+    <string name="high_temp_text">High %1$dF.</string>
+    <string name="wind_speed_text">Winds %1$s at %2$dmph.</string>
     <string name="wind_speed_label">Wind Speed</string>
-    <string name="wind_speed_value">%d m/s</string>
+    <string name="wind_speed_value">%$1d m/s</string>
     <string name="pressure_label">Pressure</string>
-    <string name="pressure_value">%d hpa</string>
+    <string name="pressure_value">%$1d hpa</string>
     <string name="humidity_label">Humidity</string>
     <string name="sunrise_label">Sunrise</string>
-    <string name="city_label">Measured: %s</string>
+    <string name="city_label">Measured: %1$s</string>
 </resources>
