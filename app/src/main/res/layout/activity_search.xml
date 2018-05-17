@@ -14,14 +14,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome"
-        android:textColor="@color/primaryText"
-        android:textSize="26sp"
-        android:textIsSelectable="false" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/prompt"
         android:textColor="@color/secondaryText"
         android:textSize="18sp"
@@ -34,10 +26,20 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/zipCode"
+        android:id="@+id/et_zip_code"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:layout_marginTop="30dp"
         android:hint="@string/zip_code_hint"
         android:maxLength="5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search_button"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:id="@+id/b_search"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
 </LinearLayout>
