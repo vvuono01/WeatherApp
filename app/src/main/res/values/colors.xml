@@ -7,4 +7,5 @@
     <color name="secondaryText">#707070</color>
     <color name="error">#FF0000</color>
     <color name="disabled">#EDEDED</color>
+    <color name="border">#EEEEEE</color>
 </resources>

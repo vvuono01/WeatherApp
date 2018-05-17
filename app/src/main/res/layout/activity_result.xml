@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,4 +9,158 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.vvuono.weatherapp.ResultActivity">
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="@string/weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/medium_text"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/small_spacing"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_basic_info"
+                android:layout_weight="3">
+
+                <TextView
+                    style="@style/weather_label"
+                    android:layout_marginBottom="@dimen/xsmall_spacing"
+                    tools:text="Partly Cloudy"/>
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondaryText"
+                    android:textSize="@dimen/small_text"
+                    tools:text="Sunshine and clouds mixed. A stray shower or thunderstorm is possible. High 91F. Winds SSW at 10 to 20 mph."/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/xxlarge_text"
+                    tools:text="80"/>
+
+                <TextView
+                    android:text="@string/degrees"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/xlarge_text"
+                    android:layout_alignTop="@+id/tv_temp"
+                    android:layout_marginTop="@dimen/xsmall_spacing"
+                    android:layout_toEndOf="@id/tv_temp"
+                    android:layout_toRightOf="@id/tv_temp"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View style="@style/border"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <TextView
+                style="@style/weather_label"
+                android:text="@string/wind_speed_label"/>
+
+            <TextView
+                style="@style/weather_value"
+                android:id="@+id/tv_wind_speed"
+                tools:text="1 m/s"/>
+
+        </LinearLayout>
+
+        <View style="@style/border"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <TextView
+                style="@style/weather_label"
+                android:text="@string/pressure_label"/>
+
+            <TextView
+                style="@style/weather_value"
+                android:id="@+id/tv_pressure"
+                tools:text="1035 hpa"/>
+
+        </LinearLayout>
+
+        <View style="@style/border"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+
+            <TextView
+                style="@style/weather_label"
+                android:text="@string/humidity_label"/>
+
+            <TextView
+                style="@style/weather_value"
+                android:id="@+id/tv_humdity"
+                tools:text="93%"/>
+
+        </LinearLayout>
+
+        <View style="@style/border"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:layout_marginBottom="@dimen/medium_spacing">
+
+            <TextView
+                style="@style/weather_label"
+                android:text="@string/sunrise_label"/>
+
+            <TextView
+                style="@style/weather_value"
+                android:id="@+id/tv_sunrise"
+                tools:text="Sunset"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/xsmall_text"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/small_spacing"
+            tools:text="Measured: Jacksonville, Florida"/>
+        
+    </LinearLayout>
+</ScrollView>
