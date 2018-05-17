@@ -33,8 +33,6 @@ public class SearchActivity extends AppCompatActivity {
 
     public static final String RESULTS_KEY = "results";
 
-    private final String TAG = "Search Screen";
-
     // For the purposes of this exercise, we will not consider ZIP+4 Codes
     private final int ZIP_CODE_LENGTH = 5;
 

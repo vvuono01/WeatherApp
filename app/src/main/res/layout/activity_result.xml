@@ -161,6 +161,6 @@
             android:textStyle="bold"
             android:layout_marginBottom="@dimen/small_spacing"
             tools:text="Measured: Jacksonville, Florida"/>
-        
+
     </LinearLayout>
 </ScrollView>
