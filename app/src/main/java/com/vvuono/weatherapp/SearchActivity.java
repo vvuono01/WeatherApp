@@ -84,7 +84,6 @@ public class SearchActivity extends AppCompatActivity {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     searchButton.setEnabled(true);
-                    Log.e(TAG, error.getLocalizedMessage());
                     error.printStackTrace();
 
                     setErrorState(R.string.weather_call_failed);
