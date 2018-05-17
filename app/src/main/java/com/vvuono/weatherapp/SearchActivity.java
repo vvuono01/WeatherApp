@@ -1,5 +1,6 @@
 package com.vvuono.weatherapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +30,8 @@ public class SearchActivity extends AppCompatActivity {
     @BindView(R.id.et_zip_code) EditText zipCodeField;
     @BindView(R.id.b_search) Button searchButton;
     @BindView(R.id.tv_error) TextView errorText;
+
+    public static final String RESULTS_KEY = "results";
 
     private final String TAG = "Search Screen";
 
@@ -73,7 +76,9 @@ public class SearchActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(String response) {
                     searchButton.setEnabled(true);
-                    // TODO: Send the response to the next screen to display it
+                    Intent resultsIntent = new Intent(getApplicationContext(), ResultActivity.class);
+                    resultsIntent.putExtra(RESULTS_KEY, response);
+                    startActivity(resultsIntent);
                 }
             }, new Response.ErrorListener() {
                 @Override
