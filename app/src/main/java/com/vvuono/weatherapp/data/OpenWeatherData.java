@@ -1,5 +1,9 @@
 package com.vvuono.weatherapp.data;
 
+import android.content.Context;
+
+import com.vvuono.weatherapp.R;
+
 import java.util.Arrays;
 
 public class OpenWeatherData {
@@ -15,48 +19,67 @@ public class OpenWeatherData {
     private String name;
     private int cod;
 
-    public Coordinate getCoord() {
-        return coord;
+    private Context context;
+
+    public void setContext(Context context) {
+        this.context = context;
     }
 
-    public SystemData getSys() {
-        return sys;
+    public String getWeatherString() {
+        if (weather.length == 1) {
+            return weather[0].getMain();
+        }
+
+        final StringBuilder sb = new StringBuilder("");
+        for (int i = 0; i < weather.length; i++) {
+            sb.append(weather[i].getMain());
+            if (weather.length > 2) {
+                if (i <= weather.length - 2) {
+                    sb.append(", ");
+                    if (i == weather.length - 2) {
+                        sb.append("and ");
+                    }
+                }
+            } else if (i == 0) {
+                sb.append(" and ");
+            }
+        }
+        return sb.toString();
     }
 
-    public WeatherData[] getWeather() {
-        return weather;
+    public String getWeatherDescription() {
+        final StringBuilder weatherDescription = new StringBuilder("");
+        weatherDescription.append(capitalizedString(weather[0].getDescription()));
+
+        for (int i = 1; i < weather.length; i++) {
+            if (weather.length > 2) {
+                if (i <= weather.length - 2) {
+                    weatherDescription.append(", ");
+                    if (i == weather.length - 2) {
+                        weatherDescription.append("and ");
+                    }
+                }
+            } else {
+                weatherDescription.append(" and ");
+            }
+            weatherDescription.append(weather[i].getDescription());
+        }
+
+        return context.getResources().getString(R.string.weather_description_text,
+                weatherDescription.toString(),
+                Math.round(main.getTempMax()),
+                wind.getDeg(),
+                Math.round(wind.getSpeed()));
     }
 
-    public String getBase() {
-        return base;
+    private String capitalizedString(String string) {
+        char[] chars = string.toCharArray();
+        chars[0] = Character.toUpperCase(chars[0]);
+        return new String(chars);
     }
 
-    public MainData getMain() {
-        return main;
-    }
-
-    public WindData getWind() {
-        return wind;
-    }
-
-    public CloudData getClouds() {
-        return clouds;
-    }
-
-    public long getDt() {
-        return dt;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getCod() {
-        return cod;
+    public String getTemperature() {
+        return Integer.toString(Math.round(main.getTemp()));
     }
 
     @Override

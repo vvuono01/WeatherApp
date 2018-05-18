@@ -23,7 +23,7 @@ public class MainData {
         return temp_min;
     }
 
-    public float getTemp_max() {
+    public float getTempMax() {
         return temp_max;
     }
 

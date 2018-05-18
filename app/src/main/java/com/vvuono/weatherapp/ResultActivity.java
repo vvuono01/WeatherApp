@@ -33,7 +33,11 @@ public class ResultActivity extends AppCompatActivity {
         String resultStr = intent.getStringExtra(SearchActivity.RESULTS_KEY);
         Gson gson = new Gson();
         weatherData = gson.fromJson(resultStr, OpenWeatherData.class);
+        weatherData.setContext(this);
 
-        System.out.println(weatherData);
+        weatherText.setText(weatherData.getWeatherString());
+        descriptionText.setText(weatherData.getWeatherDescription());
+        tempText.setText(weatherData.getTemperature());
+
     }
 }
