@@ -41,6 +41,7 @@ public class ResultActivity extends AppCompatActivity {
         windSpeedText.setText(weatherData.getWindSpeedString());
         pressureText.setText(weatherData.getPressureString());
         humidityText.setText(weatherData.getHumidityString());
+        sunriseText.setText(weatherData.getSunriseString());
         locationText.setText(weatherData.getLocationString());
     }
 }

@@ -4,7 +4,15 @@ import android.content.Context;
 
 import com.vvuono.weatherapp.R;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
+
 public class OpenWeatherData {
+    private final DateFormat SUNRISE_FORMAT = new SimpleDateFormat("h:mm a", Locale.US);
+
     private Coordinate coord;
     private SystemData sys;
     private WeatherData[] weather;
@@ -84,6 +92,13 @@ public class OpenWeatherData {
 
     public String getHumidityString() {
         return context.getResources().getString(R.string.humidity_value, main.getHumidity());
+    }
+
+    public String getSunriseString() {
+        Calendar sunrise = Calendar.getInstance();
+        sunrise.setTimeInMillis(sys.getSunrise());
+
+        return context.getResources().getString(R.string.sunrise_value, SUNRISE_FORMAT.format(sunrise.getTime()));
     }
 
     public String getLocationString() {

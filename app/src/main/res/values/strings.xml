@@ -14,5 +14,6 @@
     <string name="humidity_label">Humidity</string>
     <string name="humidity_value">%1$d%%</string>
     <string name="sunrise_label">Sunrise</string>
+    <string name="sunrise_value">%1$s (UTC)</string>
     <string name="city_value">Measured: %1$s</string>
 </resources>
