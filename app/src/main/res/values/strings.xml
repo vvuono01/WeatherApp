@@ -16,4 +16,8 @@
     <string name="sunrise_label">Sunrise</string>
     <string name="sunrise_value">%1$s (UTC)</string>
     <string name="city_value">Measured: %1$s</string>
+    <string name="menu_name">Menu</string>
+    <string name="menu_item_1">Item 1</string>
+    <string name="menu_item_2">Item 2</string>
+    <string name="menu_item_3">Item 3</string>
 </resources>

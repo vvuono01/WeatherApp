@@ -3,6 +3,7 @@ package com.vvuono.weatherapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -43,5 +44,11 @@ public class ResultActivity extends AppCompatActivity {
         humidityText.setText(weatherData.getHumidityString());
         sunriseText.setText(weatherData.getSunriseString());
         locationText.setText(weatherData.getLocationString());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
     }
 }
