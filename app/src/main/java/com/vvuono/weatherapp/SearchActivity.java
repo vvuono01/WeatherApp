@@ -3,6 +3,7 @@ package com.vvuono.weatherapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
+import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.util.Log;
@@ -66,6 +67,7 @@ public class SearchActivity extends AppCompatActivity {
         requestWeatherInformation(zipCode);
     }
 
+    @VisibleForTesting
     private boolean isZipCodeValid(String zipCode) {
         return zipCode.length() == ZIP_CODE_LENGTH;
     }
