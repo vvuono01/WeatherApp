@@ -36,7 +36,7 @@ public class SearchActivity extends AppCompatActivity {
     // For the purposes of this exercise, we will not consider ZIP+4 Codes
     private final int ZIP_CODE_LENGTH = 5;
 
-    private final String OPENWEATHER_API_URL = "http://api.openweathermap.org/data/2.5/weather?zip=%d&appid=%s";
+    private final String OPENWEATHER_API_URL = "http://api.openweathermap.org/data/2.5/weather?zip=%d&appid=%s&units=imperial";
     private final String OPENWEATHER_API_KEY = "2cc471bc46cb7bd935f36d404a4c4d2a";
 
     @Override
