@@ -4,8 +4,6 @@ import android.content.Context;
 
 import com.vvuono.weatherapp.R;
 
-import java.util.Arrays;
-
 public class OpenWeatherData {
     private Coordinate coord;
     private SystemData sys;
@@ -72,31 +70,29 @@ public class OpenWeatherData {
                 Math.round(wind.getSpeed()));
     }
 
+    public String getTemperatureString() {
+        return Integer.toString(Math.round(main.getTemp()));
+    }
+
+    public String getWindSpeedString() {
+        return context.getResources().getString(R.string.wind_speed_value, Math.round(wind.getSpeed()));
+    }
+
+    public String getPressureString() {
+        return context.getResources().getString(R.string.pressure_value, Math.round(main.getPressure()));
+    }
+
+    public String getHumidityString() {
+        return context.getResources().getString(R.string.humidity_value, main.getHumidity());
+    }
+
+    public String getLocationString() {
+        return context.getResources().getString(R.string.city_value, name);
+    }
+
     private String capitalizedString(String string) {
         char[] chars = string.toCharArray();
         chars[0] = Character.toUpperCase(chars[0]);
         return new String(chars);
-    }
-
-    public String getTemperature() {
-        return Integer.toString(Math.round(main.getTemp()));
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("OpenWeatherData{");
-        sb.append("coord=").append(coord);
-        sb.append(", sys=").append(sys);
-        sb.append(", weather=").append(Arrays.toString(weather));
-        sb.append(", base='").append(base).append('\'');
-        sb.append(", main=").append(main);
-        sb.append(", wind=").append(wind);
-        sb.append(", clouds=").append(clouds);
-        sb.append(", dt=").append(dt);
-        sb.append(", id=").append(id);
-        sb.append(", name='").append(name).append('\'');
-        sb.append(", cod=").append(cod);
-        sb.append('}');
-        return sb.toString();
     }
 }

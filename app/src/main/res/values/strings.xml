@@ -8,10 +8,11 @@
     <string name="degrees">°F</string>
     <string name="weather_description_text">%1$s. High %2$dF. Winds %3$s at %4$d mph.</string>
     <string name="wind_speed_label">Wind Speed</string>
-    <string name="wind_speed_value">%$1d m/s</string>
+    <string name="wind_speed_value">%1$d m/s</string>
     <string name="pressure_label">Pressure</string>
-    <string name="pressure_value">%$1d hpa</string>
+    <string name="pressure_value">%1$d hpa</string>
     <string name="humidity_label">Humidity</string>
+    <string name="humidity_value">%1$d%%</string>
     <string name="sunrise_label">Sunrise</string>
-    <string name="city_label">Measured: %1$s</string>
+    <string name="city_value">Measured: %1$s</string>
 </resources>
