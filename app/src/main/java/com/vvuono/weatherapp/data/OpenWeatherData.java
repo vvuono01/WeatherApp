@@ -68,7 +68,7 @@ public class OpenWeatherData {
         return context.getResources().getString(R.string.weather_description_text,
                 weatherDescription.toString(),
                 Math.round(main.getTempMax()),
-                wind.getDeg(),
+                wind.getDirection(),
                 Math.round(wind.getSpeed()));
     }
 

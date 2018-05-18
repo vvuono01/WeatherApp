@@ -1,6 +1,9 @@
 package com.vvuono.weatherapp.data;
 
 public class WindData {
+    private final String[] DIRECTIONS = {
+        "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"
+    };
     private float speed;
     private float deg;
 
@@ -12,12 +15,8 @@ public class WindData {
         return deg;
     }
 
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("WindData{");
-        sb.append("speed=").append(speed);
-        sb.append(", deg=").append(deg);
-        sb.append('}');
-        return sb.toString();
+    public String getDirection() {
+        int directionIndex = Math.round((deg / 22.5f) + 0.5f);
+        return DIRECTIONS[(directionIndex % 16)];
     }
 }
